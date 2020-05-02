@@ -1,2 +1,47 @@
 <!--pages/cart/cart.wxml-->
-<text>购物车</text>
+<!-- 1.使用自定义组件 -->
+<text class="title">购物车</text>
+<!-- <my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn/> -->
+<!-- 2.自定义样式的细节 -->
+<!-- <my-style/> -->
+<!-- 3.给自定义组件传递数据/样式 -->
+<!-- <my-prop title="哈哈哈" titleClass="red"/>
+<my-prop title="呵呵呵" titleClass="green"/>
+<my-prop titleClass="blue"/> -->
+<!-- 4.组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event bind:add="addBtn"/>
+<!-- 5.tab-control的练习 -->
+<w-tab-control title="{{['流行', '新款', '精选']}}"
+               bind:itemClick="getEvent"
+               />
+<!-- 6.页面改变组件的数据 -->
+<button size="mini" class="btn" bindtap="copBtnAdd">+20</button>
+<my-sel class="sel" id="count"/>
+<!-- 7.插槽的使用 -->
+<!-- 7.1.单个插槽的使用 -->
+<my-slot/>
+<my-slot>
+  <button size="mini">我是按钮</button>
+</my-slot>
+<my-slot>
+  <text>我是文本</text>
+</my-slot>
+<my-slot>
+  <image src="https://i0.hdslb.com/bfs/bangumi/image/86ea614061e47154dbad2a14bdcdfe19316b2a0b.jpg@320w_428h.jpg"/>
+</my-slot>
+<my-slot>
+  <slider value="60"></slider>
+</my-slot>
+<!-- 7.2.多个插槽的使用 -->
+<!-- 
+  注意：
+    1.给每一个插槽起一个名字
+    2.必须在Component对象中添加一个选项：options -> multipleSlots: true
+ -->
+<my-mslot>
+  <button size="mini" slot="slot2">按钮</button>
+  <slider value="60" slot="slot1"/>
+</my-mslot>

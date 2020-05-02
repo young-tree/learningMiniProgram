@@ -1,0 +1,12 @@
+// js代码
+var message = "Hello world";
+var name = "young-tree";
+function sum(a,b) {
+  return a + b;
+}
+// commonjs模块化导出的写法
+module.exports = {
+  message: message,
+  name: name,
+  sum: sum
+}

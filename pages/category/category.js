@@ -1,66 +1,67 @@
 // pages/category/category.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    title: ["裤子", "鞋子", "上衣"],
+    isShow: true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleBtn() {
+    console.log("被点击")
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleTouchStar() {
+    console.log("TouchStar");
+    console.log("手指触摸动作开始");
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleTouchMove() {
+    console.log("TouchMove");
+    console.log("手指触摸后移动");
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTap() {
+    console.log("Tap");
+    console.log("手指触摸后马上离开");
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleLongPress() {
+    console.log("LongPress");
+    console.log("手指触摸后超过350ms，此事件触发，tap事件将不触发");
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleTouchEnd() {
+    console.log("TouchEnd");
+    console.log("手指触摸动作结束");
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleEventClick(event) {
+    console.log("---", event)
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleEnd(event) {
+    console.log("+++", event)
+  },
+  innerClick(event) {
+    console.log(event)
+  },
+  outerClick(event) {
+    console.log(event)
+  },
+  textBtn(event) {
+    console.log(event)
+    const dataset = event.currentTarget.dataset;
+    const title = dataset["item"]
+    const index = dataset["index"]
+    console.log(title, index)
+  },
+  view1Btn() {
+    console.log("最外层捕获")
+  },
+  view1Click() {
+    console.log("最外层冒泡")
+  },
+  view2Btn() {
+    console.log("中层捕获")
+  },
+  view2Click() {
+    console.log("中层冒泡")
+  },
+  view3Btn() {
+    console.log("最底层捕获")
+  },
+  view3Click() {
+    console.log("最底层冒泡")
   }
 })

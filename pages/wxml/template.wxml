@@ -1,0 +1,4 @@
+<template name="review">
+    <button size="mini">{{btnType}}</button>
+    <view>{{textCon}}</view>
+</template>

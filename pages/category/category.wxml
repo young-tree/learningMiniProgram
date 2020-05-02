@@ -1,2 +1,40 @@
 <!--pages/category/category.wxml-->
 <text>分类</text>
+<!-- 1.时间处理回顾 -->
+<button bindtap="handleBtn" size="mini">按钮</button>
+<button bind:tap="handleBtn" size="mini">按钮</button>
+<button catchtap="handleBtn" size="mini">按钮</button>
+<button catch:tap="handleBtn" size="mini">按钮</button>
+<!-- 2.常见的一些事件 -->
+<view class="box"
+      bind:touchstart="handleTouchStar"
+      bind:touchmove="handleTouchMove"
+      bind:tap="handleTap"
+      bind:longpress="handleLongPress"
+      bind:touchend="handleTouchEnd"
+      ></view>
+<!-- 3.事件对象的分析 -->
+<button size="mini" 
+        bindtap="handleEventClick" 
+        id="btn"
+        bind:touchend="handleEnd"
+        >事件对象分析</button>
+<view class="outer" bindtap="outerClick" id="outer">
+  外层
+  <view class="inner" bindtap="innerClick" id="inner">内层</view>
+</view>
+<!-- 4.事件的传递参数 -->
+<view class="container">
+  <block wx:for="{{title}}" wx:key="item">
+   <view class="item" 
+         bindtap="textBtn"
+         data-index="{{index}}"
+         data-item="{{item}}">{{item}}</view>
+  </block>
+</view>
+<!-- 5.事件冒泡和事件捕获 -->
+<view class="view1" capture-bind:tap="view1Btn" bindtap="view1Click">
+  <view class="view2" capture-bind:tap="view2Btn" catchtap="view2Click">
+    <view class="view3" capture-bind:tap="view3Btn" bindtap="view3Click"></view>
+  </view>
+</view>

@@ -1,1 +1,38 @@
 /* pages/category/category.wxss */
+.box{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}
+.outer{
+  width: 300rpx;
+  height: 300rpx;
+  background-color: aqua;
+}
+.inner{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: red;
+}
+.container{
+  display: flex;
+}
+.item{
+  flex: 1;
+  text-align: center;
+}
+.view1{
+  width: 600rpx;
+  height: 600rpx;
+  background-color: tomato;
+}
+.view2{
+  width: 400rpx;
+  height: 400rpx;
+  background-color: gray;
+}
+.view3{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: black;
+}

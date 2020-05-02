@@ -1,1 +1,16 @@
 /* pages/cart/cart.wxss */
+.title{
+  color: red;
+}
+.red{
+  color: red;
+}
+.green{
+  color: green;
+}
+.blue{
+  color: blue;
+}
+.btn{
+  margin-top: 30rpx;
+}

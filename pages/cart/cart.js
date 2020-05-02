@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter: 0
   },
 
   /**
@@ -62,5 +62,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  addBtn(event) {
+    this.setData({
+      counter: this.data.counter+1
+    })
+    console.log(event)
+  },
+  getEvent(event) {
+    console.log(event)
+  },
+  copBtnAdd(event) {
+    // 最终目的：修改组件中的counter
+    // 1.获取组件对象
+    const sel = this.selectComponent('.sel')
+    // 2.通过setData修改组件中的数据
+    // sel.setData({
+    //   counter: sel.data.counter + 20
+    // }) 
+    // 3.通过方法对我们的数据进行修改
+    sel.addCounter(20)
   }
 })

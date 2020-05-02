@@ -1,0 +1,5 @@
+@import "./style/button.wxss";
+.container1{
+  color: aqua !important;
+  font-size: 30px; 
+}

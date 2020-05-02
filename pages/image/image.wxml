@@ -1,0 +1,28 @@
+<!-- 1.image的基本使用 -->
+<!-- 
+  重点：
+  1.image组件既可以写成单标签也可以写成双标签
+  2.组件默认有自己的大小：320x240
+  3.image是行内元素块级元素：即：inline-block
+ -->
+ <!-- <image></image>
+ <image/> -->
+ <!-- 2.src：本地路径（相对路径/绝对路径）/远程地址 -->
+ <image src="../../assets/test/littleGombie.jpg"/>
+ <image src="/assets/test/littleGombie.jpg"/>
+ <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+ <!-- 补充：相册中的图片 -->
+ <button bindtap="handleChooseAlbum">选中我们的图片</button>
+ <image src="{{addImage}}"/>
+ <!-- 3.bindload:监听图片加载完成 -->
+ <!-- lazy-load：图片的懒加载 -->
+ <image wx:for = "{{1}}" wx:key = "item"
+        src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+        bindload = "handleImageLoad"
+        lazy-load
+/>
+<!-- 4.show-menu-by-longpress：开启长按图片显示识别小程序码菜单----去真机测试 -->
+<image show-menu-by-longpress
+       src="../../assets/test/littleGombie.jpg"
+/>
+<!-- 5.mode:图片裁剪、缩放的模式 -->

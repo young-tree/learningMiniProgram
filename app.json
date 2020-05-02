@@ -1,6 +1,15 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/wxs/wxs",
+    "pages/wxml/wxml",
+    "pages/wxss/wxss",
+    "pages/scroll/scroll",
+    "pages/input/input",
+    "pages/image/image",
+    "pages/view/view",
+    "pages/button/button",
+    "pages/text/text",
     "pages/cart/cart",
     "pages/profile/profile",
     "pages/category/category"
@@ -41,6 +50,9 @@
         "selectedIconPath": "assets/tabbar/profile_active.png"
       }
     ]
+  },
+  "usingComponents": {
+    "my-cpn": "./components/my-cpn/my-cpn"
   },
   "sitemapLocation": "sitemap65.json"
 }

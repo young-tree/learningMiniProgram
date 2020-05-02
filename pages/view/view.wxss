@@ -1,0 +1,42 @@
+/* pages/view/view.wxss */
+.box {
+  color: white;
+  background-color: red;
+}
+.box1 {
+  color: wheat;
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+}
+.hover-view {
+  font-size: 40px;
+  background-color: teal;
+  color: red;
+  width: 100px;
+  height: 100px;
+}
+.box3 {
+  color: wheat;
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+}
+.hover-view1 {
+  font-size: 40px;
+  background-color: teal;
+  color: red;
+  width: 100px;
+  height: 100px;
+}
+.box2{
+  margin-top: 20px;
+  background-color: black;
+  width: 200px;
+  height: 200px;
+}
+.hover-view2 {
+  background-color: teal;
+  width: 200px;
+  height: 200px;
+}
